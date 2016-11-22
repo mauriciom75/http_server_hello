@@ -1,0 +1,14 @@
+{
+  "name": "http_server_hello",
+  "version": "0.0.1",
+  "description": "An example server para probar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.12.0"
+  },
+  "author": "Mauricio",
+  "license": "MIT"
+}
