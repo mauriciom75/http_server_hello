@@ -4,15 +4,14 @@ var app = express();
 
 app.use( function ( req, res, next ) {
 
-	console.log("\n\n User-Agent: " + req.get("User-Agent") );
-	next();
+        console.log("\n\n User-Agent: " + req.get("User-Agent") );
+        next();
 });
-
 app.use('/static', serveIndex(__dirname + '/static' /* , {'icons': true}*/));
 app.use('/static',express.static(__dirname + '/static'));
 
 app.get('/', function (req, res) {
-  res.send('<body>Hello World! <a href="http://www.google.com.ar">www.google.com.ar</a></body>');
+  res.send('<body>Hello ' + process.env.NOMBRE_SALUDO + '</body>');
 });
 
 
